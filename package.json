@@ -62,6 +62,9 @@
       "project": [
         "./tsconfig.json"
       ]
+    },
+    "rules": {
+        "@typescript-eslint/require-await": 0
     }
   },
   "prettier": {
