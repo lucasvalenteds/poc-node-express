@@ -1,3 +1,5 @@
+import { v4 as UUID } from "uuid";
+
 import { CustomerResponse, Customer } from "./types";
 
 export interface CustomerService {
@@ -19,7 +21,7 @@ export class CustomerServiceDefault implements CustomerService {
 
     const customerResponse: CustomerResponse = {
       ...customer,
-      id: "",
+      id: UUID(),
     };
 
     this.database.push(customerResponse);
