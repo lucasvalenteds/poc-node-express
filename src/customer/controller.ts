@@ -26,7 +26,9 @@ export class CustomerControllerDefault implements CustomerController {
   }
   async findById(request: Request, response: Response): Promise<unknown> {
     try {
-      const customerResponse = await this.service.findById(request.params.id);
+      const customerResponse = await this.service.findById(
+        request.params.customerId
+      );
 
       return response.status(200).json(customerResponse);
     } catch (error) {
