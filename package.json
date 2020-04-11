@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon index.ts",
+    "start": "PORT=8080 nodemon index.ts",
     "test": "jest",
     "build": "tsc"
   },
